@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menuContainer">
+            <input id = "colorsample" type="color" value="#d4ce21">
+            <select  class="modeSelector" name="mode" id="mode">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="complement">Complement</option>
+                <option value="analogic">Analogic</option>
+              </select>
+            
+            <button id="getcolor">Get Color Scheme</button>
+        </div>
+    </header>
+    <main>
+        <div id= "palletContainer" class="palletContainer"></div>
+    <div id="snackbar"></div>
+    </main>
+
+    
+</body>
+<script src="index.js"></script>
+</html>
