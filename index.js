@@ -1,11 +1,11 @@
-
+const getColorBtn = document.getElementById("getcolor");
 
 function getColors(){
     const mode = document.getElementById("mode")
-    const sampleColor = document.getElementById("colorsample")
+    const sampleColor = document.getElementById("colorsample");
     const color = sampleColor.value.slice(1)
     const url = `https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode.value}&count=10`
-    const colorArray = []
+    let colorArray = []
 
     fetch(url)
     .then(res => res.json())
@@ -15,12 +15,19 @@ function getColors(){
             colorArray.push(fullData[i].hex.value)
         }
         document.getElementById("palletContainer").innerHTML = render(colorArray)
+        const colorString = colorArray.toString()
+        mode.style.background = `linear-gradient(to right,${colorString})`;
+        mode.style.backgroundColor = colorArray[4]
+        getColorBtn.style.background=colorArray[4]
+
+        
     })
 }
     
 
-    document.getElementById("getcolor").addEventListener("click",function(){
+    getColorBtn.addEventListener("click",function(){
         getColors()
+       
     
     })
 
