@@ -19,6 +19,7 @@ function getColors(){
         mode.style.background = `linear-gradient(to right,${colorString})`;
         mode.style.backgroundColor = colorArray[4]
         getColorBtn.style.background=colorArray[4]
+        document.getElementById("menuContainer").style.background=`linear-gradient(to right,${colorString})`
 
         
     })
